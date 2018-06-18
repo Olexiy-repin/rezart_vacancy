@@ -1,0 +1,119 @@
+.header {
+  padding-top: .8rem;
+  padding-bottom: 4.9rem;
+  background-image: url("img/header-bg-sm.png");
+  background-position: top;
+  background-size: cover;
+  background-repeat: no-repeat;
+  .row:first-of-type {
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 3.2rem;
+  }
+}
+
+.header__logo-svg {
+	fill: #fff;
+	width: 2.2rem;
+	height: 2.2rem;
+}
+
+.header__vacancy-link {
+  font-family: GilroyEb;
+  font-size: pxToRem(14px);
+  display: flex;
+  align-items: center;
+  color: #fff;
+  text-decoration: none;
+  text-transform: uppercase;
+  justify-content: flex-end;
+  letter-spacing: .7px;
+}
+
+.right-arrow  {
+  margin-right: .9rem;
+  display: flex;
+  align-items: center;
+  svg {
+    display: inline-block;
+    fill: #fff;
+    width: 1rem;
+    height: 1rem;
+  }
+}
+
+.header__date,
+.header__geo {
+  font-family: GilroyL;
+  font-size: pxToRem(12px);
+  color: #b39c72;
+  text-transform: uppercase;
+  text-align: center;
+}
+
+.header__date {
+  margin-bottom: .7rem;
+  letter-spacing: .7px;
+}
+
+.header__geo {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  letter-spacing: .6px;
+}
+
+.geolocation  {
+  margin-right: .4rem;
+  svg {
+    display: inline-block;
+    fill: #b39c72;
+    width: .8rem;
+    height: .8rem;
+  }
+}
+
+.header__title {
+  font-family: GilroyEb;
+  font-size: pxToRem(30px);
+  color: #fff;
+  text-transform: uppercase;
+  text-align: center;
+  margin-bottom: .7rem;
+}
+
+@media (min-width: 768px) {
+  .header {
+    padding-top: 2.3rem;
+    padding-bottom: 6.1rem;
+    background-image: url("img/header-bg-md.png");
+    .row:first-of-type {
+      padding: 0 .6rem;
+      margin-bottom: 3.9rem;
+    }
+  }
+
+  .header__logo-svg {
+    width: 2.4rem;
+    height: 2.4rem;
+  }
+
+  .header__date {
+    margin-bottom: .5rem;
+  }
+
+  .header__title {
+    font-size: pxToRem(48px);
+    margin-bottom: 1rem;
+  }
+}
+
+@media (min-width: 1200px) {
+  .header {
+    padding-bottom: 12.3rem;
+    background-image: url("img/header-bg-lg.png");
+    .row:first-of-type {
+      margin-bottom: 9.7rem;
+    }
+  }
+}

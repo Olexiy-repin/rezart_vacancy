@@ -1,0 +1,91 @@
+#footer-1 {
+  padding-top: 3.3rem;
+  padding-bottom: 1.2rem;
+  background-color: #41a7e7;
+}
+
+#footer-1 .logo-container {
+  margin: auto;
+}
+
+#footer-1 .menu__contact-container {
+  text-align: center;
+  margin-top: 1rem;
+  margin-bottom: 0;
+}
+
+#footer-1 .menu__mail {
+  margin-top: 0;
+  margin-bottom: .8rem;
+}
+
+#footer-1 .menu__tel {
+  letter-spacing: .4px;
+}
+
+@media (min-width: 768px) {
+  #footer-1 {
+    padding-top: 5.6rem;
+    padding-bottom: 1.3rem;
+  }
+  .footer-1__container {
+    display: flex;
+    justify-content: space-between;
+    padding: 0 .5rem;
+  }
+
+  #footer-1 .menu__contact-container {
+    display: flex;
+    margin-top: 0;
+    padding-top: 2rem;
+    width: 50.4%;
+    justify-content: space-between;
+  }
+
+  #footer-1 .logo-container {
+    margin: 0;
+  }
+
+  #footer-1 .logo-container {
+    width: 3rem;
+  }
+}
+
+@media (min-width: 1024px) {
+  #footer-1 {
+    padding-top: 1.6rem;
+    padding-bottom: 1rem;
+  }
+
+  .footer-1__container {
+    padding: 0 0 0 1.7rem;
+  }
+
+  #footer-1 .menu__contact-container {
+    width: 40.4%;
+  }
+
+  #footer-1 .menu__mail {
+    margin-bottom: 0;
+  }
+}
+
+@media (min-width: 1920px) {
+  #footer-1 {
+    padding-top: 2.4rem;
+  }
+
+  .footer-1__container {
+    padding: 0 0 0 .5rem;
+    position: relative;
+  }
+
+  #footer-1 .menu__contact-container {
+    width: 34.1%;
+    position: absolute;
+    right: -2.7%;
+    bottom: .8rem;
+  }
+
+
+}
