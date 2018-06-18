@@ -28,6 +28,14 @@
   text-transform: uppercase;
   justify-content: flex-end;
   letter-spacing: .7px;
+  &:hover {
+    transition: all .5s linear;
+    color: #1c54e9;
+  }
+  &:hover .right-arrow svg {
+    transition: all .3s linear;
+    fill: #1c54e9;
+  }
 }
 
 .right-arrow  {
