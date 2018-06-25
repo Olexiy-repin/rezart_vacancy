@@ -1,28 +1,57 @@
-var fileInput = document.querySelector('.file-input');
-var preview = document.querySelector('.preview');
+window.onload = function() {
+  var fileInput = document.querySelector('.file-input');
+  var preview = document.querySelector('.preview');
+  var modalFileInput = document.querySelector('.modal-content .file-input');
+  var modalPreview = document.querySelector('.modal-content .preview');
 
-fileInput.addEventListener('change', updateImageDisplay);
+  fileInput.addEventListener('change', updateImageDisplay);
+  modalFileInput.addEventListener('change', updateModalDisplay);
 
-function updateImageDisplay() {
-  var button = document.querySelector('.resume-container__label');
+  function updateImageDisplay() {
+    var button = document.querySelector('.resume-container__label');
 
-  button.classList.add('active');
+    button.classList.add('active');
 
-  while(preview.firstChild) {
-    preview.removeChild(preview.firstChild);
+    while(preview.firstChild) {
+      preview.removeChild(preview.firstChild);
+    }
+
+    var curFiles = fileInput.files;
+
+    if(curFiles[0].size > 5000000) {
+      var para = document.createElement('p');
+
+      para.textContent = 'Превышен лимит МБ';
+      preview.appendChild(para);
+    } else {
+      var para = document.createElement('p');
+
+      para.textContent = 'Загружено: ' + curFiles[0].name;
+      preview.appendChild(para);
+    }
   }
 
-  var curFiles = fileInput.files;
+  function updateModalDisplay() {
+    var button = document.querySelector('.resume-container__label');
 
-  if(curFiles[0].size > 5000000) {
-    var para = document.createElement('p');
+    button.classList.add('active');
 
-    para.textContent = 'Превышен лимит МБ';
-    preview.appendChild(para);
-  } else {
-    var para = document.createElement('p');
+    while(modalPreview.firstChild) {
+      modalPreview.removeChild(modalPreview.firstChild);
+    }
 
-    para.textContent = 'Загружено: ' + curFiles[0].name;
-    preview.appendChild(para);
+    var curModalFiles = modalFileInput.files;
+
+    if(curModalFiles[0].size > 5000000) {
+      var para = document.createElement('p');
+
+      para.textContent = 'Превышен лимит МБ';
+      modalPreview.appendChild(para);
+    } else {
+      var para = document.createElement('p');
+
+      para.textContent = 'Загружено: ' + curModalFiles[0].name;
+      modalPreview.appendChild(para);
+    }
   }
-}
+};

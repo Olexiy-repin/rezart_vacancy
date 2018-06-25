@@ -1,0 +1,1 @@
+$(document).ready(function(){$(".dummy").viewportChecker({offset:"98%",repeat:!0,callbackFunction:function(e,a){console.log(a),"add"==a?$(".plashka").addClass("fixed"):$(".plashka").removeClass("fixed")}})});

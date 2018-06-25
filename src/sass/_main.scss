@@ -19,3 +19,9 @@ body {
   max-width: pxToRem(1186px);
   min-width: pxToRem(320px);
 }
+
+.fixed {
+  position:fixed!important;
+  opacity: 1!important;
+  visibility: visible!important;
+}
